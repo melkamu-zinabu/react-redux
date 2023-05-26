@@ -9,7 +9,14 @@ const Hookcakecontainer = () => {
     <div>
       <h2>numberofcake-{numberofcake}</h2>
       <button onClick={()=>dispatch(buycake())}>buycake</button>
-    </div>
+      {/*
+      dispatch function doesn't decide where to dispatch the action. 
+      It simply sends the action to the Redux store
+      When you dispatch an action using dispatch(buycake()), 
+      the action will be passed to both reducer1 and reducer2 (if we have 2 reducer) within the root reducer. 
+      Each reducer will check the action's type and decide how to update its portion of the state.
+    */}
+      </div> 
   )
 }
 
