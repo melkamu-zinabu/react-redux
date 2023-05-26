@@ -21,7 +21,11 @@ const mapStateToProps = (state)=>{
 // here the actions is dispatch to the props.
 const mapDispatchToProps = (dispatch) => {
     return {
-      buycake: () => dispatch(buycake()) // Remove the invocation of buycake()
+        
+      buycake: () => {
+        dispatch(buycake())
+        dispatch(buycake())
+    } // Remove the invocation of buycake()
     };
   };
 
